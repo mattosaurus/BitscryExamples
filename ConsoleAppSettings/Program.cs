@@ -44,6 +44,9 @@ namespace ConsoleAppSettings
             Log.Information("Building service provider");
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
+            // Print connection string to demonstrate configuration object is populated
+            Console.WriteLine(configuration.GetConnectionString("DataConnection"));
+
             try
             {
                 Log.Information("Starting service");
