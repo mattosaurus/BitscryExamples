@@ -30,7 +30,7 @@
                data-url="@Url.Action("Customers", "Api")">
             <thead>
                 <tr>
-                    <th data-field="CustomerID" data-sortable="true">Customer ID</th>
+                    <th data-field="CustomerId" data-sortable="true">Customer ID</th>
                     <th data-field="Title" data-sortable="true">Title</th>
                     <th data-field="FirstName" data-sortable="true">First Name</th>
                     <th data-field="MiddleName" data-sortable="true">Middle Name</th>
@@ -40,7 +40,11 @@
         </table>
     </div>
 </div>
-
+<div class="row">
+    <div class="col">
+        &nbsp;
+    </div>
+</div>
 <div class="row">
     <div class="col">
         <h4>DataTables</h4>
@@ -77,19 +81,19 @@
         }
     </script>
     <script>
-            $('table#customers').dataTable({
-                "oDataUrl": "@Url.Action("Customers", "Api")",
-                "oDataViaJSONP": false,	// set to true for cross-domain requests
-                "oDataAbort": false, // set to true to cancel previous on-going request
-                "ajax": ajaxOData,
-                "serverSide": true, // set to true for OData server side filtering and sorting
-                "columns": [
-                    { data: "CustomerID", type: "num" },
-                    { data: "Title" },
-                    { data: "FirstName" },
-                    { data: "MiddleName" },
-                    { data: "LastName" }
-                ],
-            });
-        </script>
+        $('table#customers').dataTable({
+            "oDataUrl": "@Url.Action("Customers", "Api")",
+            "oDataViaJSONP": false,	// set to true for cross-domain requests
+            "oDataAbort": false, // set to true to cancel previous on-going request
+            "ajax": ajaxOData,
+            "serverSide": true, // set to true for OData server side filtering and sorting
+            "columns": [
+                { data: "CustomerId", type: "num" },
+                { data: "Title" },
+                { data: "FirstName" },
+                { data: "MiddleName" },
+                { data: "LastName" }
+            ],
+        });
+    </script>
 }
