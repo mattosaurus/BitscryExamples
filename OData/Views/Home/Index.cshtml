@@ -2,7 +2,94 @@
     ViewData["Title"] = "Home Page";
 }
 
+@section Head{
+    <link href="~/vendor/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.css" rel="stylesheet" />
+    <link href="~/vendor/datatables/css/jquery.dataTables.css" rel="stylesheet" />
+}
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div class="row">
+    <div class="col">
+        <h4>Bootstrap-Table</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table id="table"
+               data-toggle="table"
+               data-pagination="true"
+               data-side-pagination="server"
+               data-search="true"
+               data-query-params="queryParams"
+               data-response-handler="responseHandler"
+               data-url="@Url.Action("Customers", "Api")">
+            <thead>
+                <tr>
+                    <th data-field="CustomerID" data-sortable="true">Customer ID</th>
+                    <th data-field="Title" data-sortable="true">Title</th>
+                    <th data-field="FirstName" data-sortable="true">First Name</th>
+                    <th data-field="MiddleName" data-sortable="true">Middle Name</th>
+                    <th data-field="LastName" data-sortable="true">Last Name</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h4>DataTables</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table id="customers"></table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/vendor/bootstrap-table/bootstrap-table.js"></script>
+    <script src="~/vendor/bootstrap-table/extensions/filter-control/bootstrap-table-filter-control.js"></script>
+    <script src="~/vendor/datatables/js/jquery.dataTables.js"></script>
+    <script src="~/vendor/datatables/plugins/jquery.dataTables.odata-v4.js"></script>
+    <script>
+        function queryParams(params) {
+            return {
+                $top: params.limit,
+                $skip: params.offset,
+                $search: params.searchText,
+                $sort: params.sortName,
+                $order: params.sortOrder,
+                $count: true
+            };
+        }
+
+        function responseHandler(res) {
+            return {
+                total: res['@@odata.count'],
+                rows: res.value
+            };
+        }
+    </script>
+    <script>
+            $('table#customers').dataTable({
+                "oDataUrl": "@Url.Action("Customers", "Api")",
+                "oDataViaJSONP": false,	// set to true for cross-domain requests
+                "oDataAbort": false, // set to true to cancel previous on-going request
+                "ajax": ajaxOData,
+                "serverSide": true, // set to true for OData server side filtering and sorting
+                "columns": [
+                    { data: "CustomerID", type: "num" },
+                    { data: "Title" },
+                    { data: "FirstName" },
+                    { data: "MiddleName" },
+                    { data: "LastName" }
+                ],
+            });
+        </script>
+}
