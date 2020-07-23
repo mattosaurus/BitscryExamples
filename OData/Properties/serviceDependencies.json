@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "DataConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "LogConnection"
+    },
+    "secrets1": {
+      "type": "secrets"
+    }
+  }
+}

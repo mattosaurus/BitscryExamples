@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/datofy/databases/adventureworks",
+      "type": "mssql.azure",
+      "connectionId": "DataConnection",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroup')]/providers/Microsoft.Sql/servers/datofy/databases/adventureworks",
+      "type": "mssql.azure",
+      "connectionId": "LogConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
