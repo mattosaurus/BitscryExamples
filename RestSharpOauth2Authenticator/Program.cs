@@ -105,28 +105,4 @@ namespace RestSharpOauth2Authenticator
             serviceCollection.AddTransient<App>();
         }
     }
-
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        RestClient restClient = new RestClient("https://mcsfwcp0sprjghvyljylgbzt-n1y.auth.marketingcloudapis.com");
-
-    //        Dictionary<string, string> authenticationParameters = new Dictionary<string, string>()
-    //        {
-    //            { "grant_type", "client_credentials"},
-    //            { "client_id", "kvkk4yxseu00qias164rngh5"},
-    //            { "client_secret", "mTMvpEg9n1clPLHOlSGsWi2v"},
-    //            { "scope", "push_read push_write push_send"},
-    //            { "account_id", "1303591"}
-    //        };
-
-    //        restClient.Authenticator = new OAuth2Authenticator(authenticationParameters);
-
-    //        RestRequest appInforRequest = new RestRequest("/push/v1/application/{appId}", Method.GET);
-    //        appInforRequest.AddParameter("appId", "57c976e6-dbe1-481e-8c04-00f848ca959e", ParameterType.UrlSegment);
-
-    //        var appInforResponse = restClient.Execute(appInforRequest);
-    //    }
-    //}
 }
