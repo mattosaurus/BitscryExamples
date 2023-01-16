@@ -3,3 +3,6 @@ An example C# .Net Core console application showing how to use an appsettings.js
 
 # [OData](https://github.com/mattosaurus/BitscryExamples/tree/master/OData)
 An example C# .Net Core MVC web application showing how to use OData to query tables in the [AdventureWorks](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15) sample SQL database. The resulting OData is also usable as a data source in [Bootstrap Table](https://bootstrap-table.com/) and [DataTables](https://datatables.net/) HTML tables. 
+
+# [ImageServe](https://github.com/mattosaurus/BitscryExamples/tree/master/ImageServe)
+An example Azure Function which demonstrates how to retrieve images from a remote file store like Azure Blob Storage or AWS S3 and optionally resize them.
