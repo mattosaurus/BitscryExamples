@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29411.108
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppSettings", "ConsoleAppSettings\ConsoleAppSettings.csproj", "{128D78B2-323F-4D05-A91E-2FF18FB90AFB}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AADGroupAuthorization", "AA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageOverlay", "ImageOverlay\ImageOverlay.csproj", "{B6C36A6E-31BF-4E19-BE96-918AE5536CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpOauth2Authenticator", "RestSharpOauth2Authenticator\RestSharpOauth2Authenticator.csproj", "{FB48E30B-CE08-4CB7-9F88-F7E5C2758E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestSharpOauth2Authenticator", "RestSharpOauth2Authenticator\RestSharpOauth2Authenticator.csproj", "{FB48E30B-CE08-4CB7-9F88-F7E5C2758E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageServe", "ImageServe\ImageServe.csproj", "{528B176A-824B-47EB-9F50-9033A7F73C47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FB48E30B-CE08-4CB7-9F88-F7E5C2758E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB48E30B-CE08-4CB7-9F88-F7E5C2758E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB48E30B-CE08-4CB7-9F88-F7E5C2758E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{528B176A-824B-47EB-9F50-9033A7F73C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528B176A-824B-47EB-9F50-9033A7F73C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528B176A-824B-47EB-9F50-9033A7F73C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528B176A-824B-47EB-9F50-9033A7F73C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
